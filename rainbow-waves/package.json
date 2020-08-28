@@ -1,0 +1,23 @@
+{
+  "name": "rainbow-waves",
+  "version": "0.0.7",
+  "description": "z7xisoo rainbow-waves vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/z7xisoo/rainbow-waves"
+  },
+  "homepage":"github.com/z7xisoo/rainbow-waves",
+  "keywords": [
+    "rainbow-waves",
+    "z7xisoo",
+    "waves",
+    "diy",
+    "vue"
+  ],
+  "author": "",
+  "license": "MIT"
+}
