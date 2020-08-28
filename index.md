@@ -1,37 +1,100 @@
-## Welcome to GitHub Pages
+# rainbow-waves
 
-You can use the [editor on GitHub](https://github.com/rainbow-waves/rainbow-waves.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+rainbow-waves is a wave component on Vue.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Install
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+npm i --save rainbow-waves
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+```js
+import RainbowWaves from 'rainbow-waves'
+```
 
-### Jekyll Themes
+## Usage
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rainbow-waves/rainbow-waves.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```html
+<rainbow-waves :config="config"></rainbow-waves>
+```
 
-### Support or Contact
+## Options
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```js
+config = {
+  // canvas id
+  el: {
+    type:String,
+    default:"rainbow-waves"
+  },
+  // canvas width
+  width:{
+    type:Number,
+    default:1920
+  },
+  // canvas height
+  height:{
+    type:Number,
+    default:1080
+  },
+  // canvas background-color
+  backgroundColor:{
+    type:String,
+    default:"#fff"
+  },
+  // waves
+  waves::{
+    type:Array,
+    default(){
+      return [
+        {
+          // wave color
+          color: {
+            type:String,
+            default:"blue"
+          },
+          // Wave jitter frequency 波浪抖动频率
+          // [0.01 - 1.00]
+          jitter:{
+            type:Number,
+            default:0.04
+          },
+          // Peak difference recovery speed 波峰差值恢复速度
+          //  [0.01 - 1.00]
+          restore:{
+            type:Number,
+            default:0.03
+          },
+          // Wave peak difference 波浪峰差
+          waveGap:{
+            type:Number,
+            default:80
+          },
+          // Water level difference 水位差
+          waterGap:{
+            type:Number,
+            default:20
+          },
+          // Wave frequency 波浪起伏频率
+          // [1 - 10]
+          waveUps:{
+            type:Number,
+            default:6
+          },
+          // Wave ratio in canvas height 波浪占比
+          // [0.01 - 1]
+          waveHeight:{
+            type:Number,
+            default:0.45
+          },
+        }
+      ];
+    }
+  },
+}
+
+```
+
+## LICENSE
+
+MIT
